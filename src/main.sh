@@ -110,7 +110,7 @@ function setup_permissions {
 
   if [[ -e "${dir}" ]]; then
       sudo chown -R "$uid:$gid" "${dir}"
-      sudo chmod -R o+rw "${dir}"
+      sudo chmod -R ugo+rw "${dir}"
   fi
 }
 
