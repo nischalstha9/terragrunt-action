@@ -226,7 +226,8 @@ function main {
   setup_permissions "${GITHUB_OUTPUT}"
   # setup permissions for the output files
   setup_post_exec
-
+  setup_permissions "${tg_dir}" "${action_user}" "${action_user}"
+  
   local -r log_file="${terragrunt_log_file}"
   trap 'rm -rf ${log_file}' EXIT
 
